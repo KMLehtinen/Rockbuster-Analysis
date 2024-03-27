@@ -21,3 +21,7 @@ The dataset for this project was created by Career Foundry as outlined in the pr
 Tableau Public was employed to create visualizations. 
 
 [Rockbuster Visualizations](https://public.tableau.com/shared/37TKTX6JR?:display_count=n&:origin=viz_share_link)
+
+# Presentation
+
+[Rockbuster Presentation](https://drive.google.com/file/d/1sWU8xd0Ci43dgn8SizcpT_1IVK9lZ0cu/view?usp=sharing)
