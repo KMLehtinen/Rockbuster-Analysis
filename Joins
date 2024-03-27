@@ -1,4 +1,28 @@
-This SQL query finds the top 5 customers from the top 10 cities who’ve paid the highest total amounts to Rockbuster.
+The followig SQL queries find the top 5 customers from the top 10 cities who’ve paid the highest total amounts to Rockbuster.
+
+SELECT
+COUNT (customer.customer_id) AS count_customer,
+country.country
+FROM customer
+INNER JOIN address ON customer.address_id=address.address_id
+INNER JOIN city ON address.city_id=city.city_id
+INNER JOIN country ON city.country_id=country.country_id
+GROUP BY country.country
+ORDER BY count_customer DESC
+LIMIT 10
+
+SELECT country.country,
+city.city,
+COUNT (city.city_id) AS count_city,
+COUNT (customer.customer_id) AS count_customer
+FROM customer
+INNER JOIN address ON customer.address_id=address.address_id
+INNER JOIN city on address.city_id=city.city_id
+INNER JOIN country ON city.country_id=country.country_id
+GROUP BY country, city
+HAVING country IN ('India', 'China', 'United States', 'Japan', 'Mexico', 'Brazil', 'Russian Federation', 'Indonesia')
+ORDER BY count_city DESC
+LIMIT 10
 
 SELECT SUM (payment.amount) AS "Total amount paid",
 city.city
