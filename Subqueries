@@ -1,4 +1,4 @@
-Subquery in SQL finds the average amount paid by the top 5 customers
+Subquery in SQL finds the average amount paid by the top 5 customers.
 
 SELECT AVG("Total amount paid") AS Average_amount_paid
 FROM
@@ -16,4 +16,27 @@ INNER JOIN country ON city.country_id=country.country_id
 GROUP BY first_name, last_name, city, customer.customer_id, country
 HAVING city IN ('Aurora', 'Acua', 'Citrus Heights', 'Iwaki', 'Ambattur', 'Shanwei')
 ORDER BY "Total amount paid" DESC
-LIMIT 5)AS total_amount_paid
+LIMIT 5) AS total_amount_paid
+
+Subquery in SQL finds out how many of the top 5 customers you identified are based within each country.
+
+SELECT
+FROM customer
+INNER JOIN adress ON customer.address_id=address.address_id
+INNER JOIN city ON address.city_id=city.city_id
+INNER JOIN country ON city.country_id=country.country_id
+LEFT JOIN (SELECT SUM (payment.amount) AS "Total amount paid",
+city.city
+customer.first_name,
+customer.last_name,
+customer.customer_id,
+country
+FROM customer
+INNER JOIN payment ON customer.customer_id=payment.customer_id
+INNER JOIN address ON customer.address_id=address.address_id
+INNER JOIN country ON city.country_id=country.country_id
+LEFT JOIN (SELECT SUM (payment.amount AS "Total amount paid",
+HAVING city IN ('Aurora','Citrus Heights', 'Iwaki', 'Ambattur', 'Shanwei')
+ORDER BY "Total amount paid" DESC
+LIMIT 5) AS top_5_customers ON top_5_customers.country=country.country
+GROUP BY country.country
