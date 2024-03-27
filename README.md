@@ -15,7 +15,9 @@ Where are customers with a high lifetime value based?
 Do sales figures vary between geographic regions?
 
 # Data
-The dataset for this project was fabricated and supplied by Career Foundry as outlined in the project brief. It was analyzed utilizing PostgreSQL. This dataset encompasses details regarding customers, staff, store locations, available movies, actors, movie languages, and rental transactions.
+The dataset for this project was created by Career Foundry as outlined in the project brief, and it was analyzed utilizing PostgreSQL. 
 
 # Visualizations
-The visualizations for the project were created in Tableau Public. The visuals can be found here: Rockbuster Visuals
+Tableau Public was employed to create visualizations. 
+
+[Rockbuster Visualizations](https://public.tableau.com/shared/37TKTX6JR?:display_count=n&:origin=viz_share_link)
