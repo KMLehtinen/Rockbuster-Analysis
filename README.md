@@ -17,6 +17,8 @@ Do sales figures vary between geographic regions?
 # Data
 The dataset for this project was created by Career Foundry as outlined in the [Project Brief](https://drive.google.com/file/d/1R60Dr53HyNYueOYSi-D8Txs7-d_IVjc0/view?usp=sharing), and it was analyzed utilizing PostgreSQL. 
 
+[Data Dictionary](https://drive.google.com/file/d/146FeJiDfnKwHpeDTZcpPaDTViZdxZcMM/view?usp=sharing)
+
 # Visualizations
 Tableau Public was employed to create visualizations. 
 
